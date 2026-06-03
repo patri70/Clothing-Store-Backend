@@ -21,12 +21,16 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
+import org.springframework.beans.factory.annotation.Value;
 
 @Configuration
 @EnableMethodSecurity
 public class SecurityConfig {
     @Autowired
     UserDetailsService userDetailsService;
+
+    @Value("${cors.allowed.origins:https://localhost:5173,https://127.0.0.1:5173,https://10.239.39.104:5173}")
+    private String[] allowedOrigins;
 
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
@@ -46,12 +50,8 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // Adăugăm originile tale specifice (Laptop IP și Localhost)
-        configuration.setAllowedOrigins(Arrays.asList(
-            "https://localhost:5173", 
-            "https://127.0.0.1:5173", 
-            "https://10.239.39.104:5173"
-        ));
+        // Adăugăm originile tale specifice (Laptop IP și Localhost) din environment variables
+        configuration.setAllowedOrigins(Arrays.asList(allowedOrigins));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*")); // Permitem toate headerele pentru a evita blocajele
         configuration.setAllowCredentials(true);
