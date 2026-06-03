@@ -1,0 +1,68 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< ro.ubbcluj:assignment >------------------------
+[INFO] Building assignment 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ assignment ---
+[INFO] Deleting C:\FacultaAnul2\Sem2\MPP2\backend\target
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default) @ assignment ---
+[INFO] argLine set to -javaagent:C:\\Users\\tatar\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\FacultaAnul2\\Sem2\\MPP2\\backend\\target\\jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ assignment ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ assignment ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 7 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ assignment ---
+[INFO] skip non existing resourceDirectory C:\FacultaAnul2\Sem2\MPP2\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ assignment ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug parameters release 17] to target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[3,38] package com.fasterxml.jackson.databind does not exist
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[6,63] package org.springframework.boot.test.autoconfigure.web.servlet does not exist
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[7,50] package org.springframework.boot.test.mock.mockito does not exist
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[21,2] cannot find symbol
+  symbol: class WebMvcTest
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[31,13] cannot find symbol
+  symbol:   class ObjectMapper
+  location: class ro.ubbcluj.assignment.controller.ProductControllerTest
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[27,6] cannot find symbol
+  symbol:   class MockBean
+  location: class ro.ubbcluj.assignment.controller.ProductControllerTest
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.336 s
+[INFO] Finished at: 2026-04-09T16:37:43+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:testCompile (default-testCompile) on project assignment: Compilation failure: Compilation failure: 
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[3,38] package com.fasterxml.jackson.databind does not exist
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[6,63] package org.springframework.boot.test.autoconfigure.web.servlet does not exist
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[7,50] package org.springframework.boot.test.mock.mockito does not exist
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[21,2] cannot find symbol
+[ERROR]   symbol: class WebMvcTest
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[31,13] cannot find symbol
+[ERROR]   symbol:   class ObjectMapper
+[ERROR]   location: class ro.ubbcluj.assignment.controller.ProductControllerTest
+[ERROR] /C:/FacultaAnul2/Sem2/MPP2/backend/src/test/java/ro/ubbcluj/assignment/controller/ProductControllerTest.java:[27,6] cannot find symbol
+[ERROR]   symbol:   class MockBean
+[ERROR]   location: class ro.ubbcluj.assignment.controller.ProductControllerTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
